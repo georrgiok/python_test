@@ -1,0 +1,57 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/hello/User
+Content-Type: application/json
+
+{
+  "data": "Foo"
+}
+
+###
+
+GET http://127.0.0.1:8000/clients
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/clients
+Content-Type: application/json
+
+{
+  "document": "0455-0554",
+  "first_name":  "Lame",
+  "last_name": "Das",
+  "patronymic":  "Dos",
+  "birthday": 799088744
+}
+
+###
+
+PUT http://127.0.0.1:8000/clients
+Content-Type: application/json
+
+{
+  "document": "0455-0554",
+  "first_name":  "Lame",
+  "last_name": "Das",
+  "patronymic":  "Dos",
+  "birthday": 799088744,
+  "client_id": 5
+}
+
+###
+
+DELETE http://127.0.0.1:8000/clients/5
+Accept: application/json
+
+###
